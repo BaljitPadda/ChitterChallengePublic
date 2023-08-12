@@ -1,3 +1,24 @@
+
+My solution
+
+My approach
+
+First I examined the user stories to identify my domain models.
+I then thought of possible routes needed and created a request/response table.
+Next I created my Peep and User schemas.
+
+
+
+
+
+
+
+
+
+
+
+
+
 Chitter Challenge
 =================
 
