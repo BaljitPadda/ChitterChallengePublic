@@ -4,8 +4,9 @@ My solution
 My approach
 
 First I examined the user stories to identify my domain models.
-I then thought of possible routes needed and created a request/response table.
+Then I thought of possible routes needed and created a request/response table.
 Next I created my Peep and User schemas.
+I created an app.js file and created my server and then I created the routes folder and route file for '/'.
 
 
 
