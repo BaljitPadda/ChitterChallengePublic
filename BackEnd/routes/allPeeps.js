@@ -9,6 +9,4 @@ router.route('/').get((req, res) => {
     Peep.find().sort({ time: 'descending' }).then(allPeeps => {
         res.send(allPeeps)
     })
-
-});
-
+})

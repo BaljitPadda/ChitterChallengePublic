@@ -11,5 +11,5 @@ router.route('/')
             .then(peep => {
                 res.status(200).send({ 'peep': 'Peep added successfully!' })
             })
-            .catch(err => res.status(400).json(err));
+            .catch(err => res.status(400).send({ 'peep': 'Oops, could not add your peep! A peep needs a userID and a message!' }));
     })
