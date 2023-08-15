@@ -6,7 +6,13 @@ My approach
 First I examined the user stories to identify my domain models.
 Then I thought of possible routes needed and created a request/response table.
 Next I created my Peep and User schemas.
-I created an app.js file and created my server and then I created the routes folder and route file for '/'.
+I created an app.js file and created my server and then I created the routes folder and route files.
+I make sure the app is using the routes inside of app.js.
+I have written tests for the routes and tests to check that I can make a peep and save it to database.
+I created mock data files for users and peeps.
+I have been using postman to make sure everything works and have saved my requests. 
+13 passing tests for backend routes.
+
 
 
 

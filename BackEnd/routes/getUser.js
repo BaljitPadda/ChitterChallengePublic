@@ -9,6 +9,8 @@ router.route('/:username').get((req, res) => {
         .then(user => {
             if (user == null) {
                 res.status(404).send("Hmm that user doesn't exist!")
+            } else if (req.body.password !== user.password) {
+                res.send("Incorrect password")
             } else
                 res.send(`Welcome ${user.name}!`);
         })
