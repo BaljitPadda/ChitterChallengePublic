@@ -1,7 +1,7 @@
 const mockData = {
     peeps: [
         {
-            userID: "000",
+            userID: "John2000",
             time: "2023-08-12T08:00:00.000Z",
             message: "First mock peep"
         },

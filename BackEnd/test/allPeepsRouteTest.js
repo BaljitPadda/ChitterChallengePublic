@@ -41,9 +41,6 @@ describe('allPeeps router tests', () => {
         //act
         const res = await chai.request(app).get('/peeps').send();
 
-        await Peep.deleteMany()
-        await Peep.insertMany(mockDataArray)
-
         //assert
         expect(res.body[0].time).to.include(["2023-08-12T08:00:00.000Z"]);
         expect(res.body[1].time).to.include(["2000-01-01T08:00:00.000Z"]);
