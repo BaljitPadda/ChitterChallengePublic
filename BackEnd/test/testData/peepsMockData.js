@@ -3,17 +3,17 @@ const mockData = {
         {
             userID: "John2000",
             time: "2023-08-12T08:00:00.000Z",
-            message: "First mock peep"
+            message: "I don't know who I am!"
         },
         {
-            userID: "111",
+            userID: "WebDev2023",
             time: "1970-12-31T06:00:00.000Z",
-            message: "Second mock peep"
+            message: "Everyone knows who I am... your friendly neighborhood Spiderman!"
         },
         {
-            userID: "222",
+            userID: "YodaBest2000",
             time: "2000-01-01T08:00:00.000Z",
-            message: "Third mock peep"
+            message: "Baby Yoda is me."
         }
     ]
 }

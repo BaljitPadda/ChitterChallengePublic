@@ -15,11 +15,11 @@ describe("registerUser router tests", () => {
         await User.insertMany(mockDataArray);
     })
 
-    it("should handle a post request made to '/signUp", async () => {
+    it("should handle a post request made to '/signup", async () => {
 
         //arrange
         //act
-        const res = await chai.request(app).post('/signUp').send({
+        const res = await chai.request(app).post('/signup').send({
             name: "fake",
             username: "fake2023",
             email: "fake@hotmail.com",
@@ -33,7 +33,7 @@ describe("registerUser router tests", () => {
 
         //arrange
         //act
-        const res = await chai.request(app).post('/signUp').send({
+        const res = await chai.request(app).post('/signup').send({
             name: "fake",
             username: "fake2023",
             email: "fake@hotmail.com",
@@ -49,7 +49,7 @@ describe("registerUser router tests", () => {
     it("should show an error message if someone tries to register with same email or username", async () => {
         //arrange
         //act
-        const res = await chai.request(app).post('/signUp').send({
+        const res = await chai.request(app).post('/signup').send({
             "name": "Spidey",
             "username": "webdev2023",
             "email": "spidey@fake.com",

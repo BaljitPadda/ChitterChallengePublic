@@ -9,14 +9,14 @@ const mockData = {
 
         {
             name: "Yoda",
-            username: "Yodabest2000",
+            username: "YodaBest2000",
             email: "yoda@green.com",
             password: "passwordisthis"
         },
 
         {
             name: "Spidey",
-            username: "webdev2023",
+            username: "WebDev2023",
             email: "spidey@fake.com",
             password: "web"
 

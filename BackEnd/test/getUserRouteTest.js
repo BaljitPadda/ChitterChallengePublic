@@ -8,12 +8,12 @@ import app from '../app.js';
 chai.use(chaiHttp);
 
 describe("getUser router tests", () => {
-    it("should handle a get request made to the login page", async () => {
+    it("should handle a request made to the login page", async () => {
 
         //arrange
         const username = "John2000";
         //act
-        const res = await chai.request(app).get('/login/John2000').send();
+        const res = await chai.request(app).post('/login/John2000').send();
 
         //assert
         expect(res).to.have.status(200);
@@ -25,13 +25,13 @@ describe("getUser router tests", () => {
         //arrange
         const fakeUser = {
             "name": "Spidey",
-            "username": "webdev2023",
+            "username": "WebDev2023",
             "email": "spidey@fake.com",
             "password": "web"
         }
 
         //act
-        const res = await chai.request(app).get('/login/webdev2023').send(fakeUser);
+        const res = await chai.request(app).post('/login/WebDev2023').send(fakeUser);
 
         //assert
         expect(res.text).to.include("Welcome Spidey!");
@@ -44,13 +44,13 @@ describe("getUser router tests", () => {
         //arrange
         const fakeUser = {
             "name": "Spidey",
-            "username": "webdev2023",
+            "username": "WebDev2023",
             "email": "spidey@fake.com",
             "password": "BADPASSWORD"
         }
 
         //act
-        const res = await chai.request(app).get('/login/webdev2023').send(fakeUser);
+        const res = await chai.request(app).post('/login/WebDev2023').send(fakeUser);
 
         //assert
         expect(res.text).to.include("Incorrect password");
@@ -68,7 +68,7 @@ describe("getUser router tests", () => {
             }
 
             //act
-            const res = await chai.request(app).get('/login/BADUSERNAME').send(fakeUser);
+            const res = await chai.request(app).post('/login/BADUSERNAME').send(fakeUser);
 
             //assert
             expect(res.text).to.include("Hmm that user doesn't exist!");

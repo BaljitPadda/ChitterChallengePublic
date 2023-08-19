@@ -1,12 +1,26 @@
 import PropTypes from "prop-types";
+import "../css/PeepCard.css";
 
 const PeepCard = (props) => {
   return (
     <>
-      <li> Name {props.name} </li>
-      <li> Username {props.username} </li>
-      <li> Posted on: {props.time} </li>
-      <li> Peep message: {props.message}</li>
+      <div className="card" style={{ width: "18rem" }}>
+        <div className="card-body">
+          <br />
+          <h5 className="card-title"> Name {props.name}</h5>
+          <h6 className="card-subtitle mb-2 text-muted">
+            {props.username} Posted on: {props.time}
+          </h6>
+          <p className="card-text"> {props.message} </p>
+          {/* <a href="#" className="card-link">
+            Comments
+          </a>{" "}
+          <br />
+          <a href="#" className="card-link">
+            RePeep
+          </a> */}
+        </div>
+      </div>
     </>
   );
 };

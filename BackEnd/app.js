@@ -18,7 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/peeps', allPeeps);
 app.use('/addPeep', addPeep);
-app.use('/signUp', registerUser);
+app.use('/signup', registerUser);
 app.use('/login', getUser);
 
 app.listen(port, host, () => {
