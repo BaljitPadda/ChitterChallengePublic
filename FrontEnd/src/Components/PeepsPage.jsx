@@ -5,11 +5,12 @@ import axios from "axios";
 import PeepCard from "./PeepCard";
 import PropTypes from "prop-types";
 import "../css/PeepsPage.css";
+import Header from "./Header";
 
-const addPeep = async () => {
+const addPeep = async (username) => {
   try {
     const response = await axios.post("http://localhost:3000/addPeep", {
-      userID: "John2000",
+      userID: username,
       message: message.value,
       // time: new Date().toLocaleDateString(),
     });
@@ -21,11 +22,6 @@ const addPeep = async () => {
     console.log(e);
     return [];
   }
-};
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  addPeep();
 };
 
 const displayPeeps = (peeps) => {
@@ -45,25 +41,38 @@ const displayPeeps = (peeps) => {
 const PeepsPage = (props) => {
   const [message, setMessage] = useState(``);
   const [time, setTime] = useState(``);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addPeep(props.userData.username);
+  };
 
   return (
     <>
       <br />
-      <form onSubmit={handleSubmit}>
-        <legend>Peep something... </legend>
-        <input
-          type="text"
-          name="message"
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
-          id="message"
-          placeholder="peep text here"
-        />
-        <br />
-        <input type="submit" value="Submit" name="submit" />
-      </form>
+      {props.userData.userIsLoggedIn && (
+        <div>
+          {/* <Header title="Logged in view" /> */}
+          <h3> Welcome {props.userData.username}! </h3>
+          <form onSubmit={handleSubmit} className="peepForm">
+            <legend>Peep something... </legend>
+            <input
+              type="text"
+              name="message"
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              id="message"
+              placeholder="peep text here"
+            />
+            <br />
+            <input type="submit" value="Submit" name="submit" />
+          </form>
+        </div>
+      )}
+      {!props.userData.userIsLoggedIn && <h2> Sign in to peep. </h2>}
       {displayPeeps(props.dataArray)}
     </>
   );
@@ -71,9 +80,10 @@ const PeepsPage = (props) => {
 
 PeepsPage.propTypes = {
   dataArray: PropTypes.array,
+  userData: PropTypes.any.isRequired,
 };
 
-PeepsPage.propTypes = {
+PeepsPage.defaultProps = {
   dataArray: [],
 };
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "../css/SignUp.css";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const addUser = async () => {
   try {
@@ -18,18 +19,22 @@ const addUser = async () => {
   }
 };
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  addUser();
-};
-
 const SignUp = () => {
+  const [registered, setRegistered] = useState(false);
+
   const [fullname, setFullname] = useState(``);
   const [username, setUsername] = useState(``);
   const [email, setEmail] = useState(``);
   const [password, setPassword] = useState(``);
 
   useEffect(() => {});
+
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    addUser();
+    setRegistered(true);
+    window.alert("Thanks for signing up. Now please login.");
+  };
 
   return (
     <>
@@ -83,6 +88,7 @@ const SignUp = () => {
           name="signup"
         />
       </form>
+      {/* {formSubmitted && <Navigate to="/" />} */}
     </>
   );
 };

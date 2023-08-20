@@ -1,3 +1,8 @@
 .createAccountForm {
     display: block;
 }
+
+.createAccountForm {
+    background-color: rgb(234, 205, 209);
+    padding: 8px;
+}

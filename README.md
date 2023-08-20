@@ -13,6 +13,11 @@ I created mock data files for users and peeps.
 I have been using postman to make sure everything works and have saved my requests. 
 13 passing tests for backend routes.
 
+For frontend, I created my own mock ups of pages and decided on a component heirarchy.
+*Please SEE MOCK UPS AND COMPONENT HEIRARCHY inside of the FrontEnd/images folder.
+
+I created my main components and identified state. 
+
 
 
 
