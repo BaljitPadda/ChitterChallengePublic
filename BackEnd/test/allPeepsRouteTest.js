@@ -2,9 +2,9 @@ import chai, { expect } from "chai";
 import chaiHttp from "chai-http";
 import app from "../app.js";
 import Peep from "../src/peep.model.js";
-import mockData from "./testData/peepsMockData.js";
+import peepMockData from "./testData/peepsMockData.js";
 
-const mockDataArray = mockData.peeps;
+const mockDataArray = peepMockData.peeps;
 
 chai.use(chaiHttp);
 

@@ -1,4 +1,4 @@
-const mockData = {
+const userMockData = {
     users: [
         {
             name: "John Doe",
@@ -25,5 +25,5 @@ const mockData = {
     ]
 }
 
-export default mockData;
+export default userMockData;
 

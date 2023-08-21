@@ -1,4 +1,4 @@
-const mockData = {
+const peepMockData = {
     peeps: [
         {
             userID: "John2000",
@@ -18,4 +18,4 @@ const mockData = {
     ]
 }
 
-export default mockData;
+export default peepMockData;

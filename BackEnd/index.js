@@ -2,28 +2,26 @@ import mongoose, { mongo } from "mongoose";
 import Peep from "./src/peep.model.js";
 import User from "./src/user.model.js";
 
-// const date = new Date();
-// console.log("Time now: " + date.getHours() + ": " + date.getMinutes() + ": " + date.getSeconds());
+import peepMockData from "./test/testData/peepsMockData.js";
+import userMockData from "./test/testData/usersMockData.js";
+
+console.log("This script pre-populates the database with some test data")
 
 const DB_URI = "mongodb://localhost:27017/Peep";
 mongoose.connect(DB_URI);
 
-const myTweet = new Peep({
-    userID: "12345",
-    message: "This is a test message"
-});
+console.log("connected to DB")
 
-const peepResult = await Peep.find();
-console.log(peepResult)
+console.log("loaded test Users into database")
 
-const user1 = new User({
-    name: "Joe Bloggs",
-    username: "JoeCodes2023",
-    email: "joebloggs@hotmail.co.uk",
-    password: "easypassword"
-});
+await User.deleteMany();
+await User.insertMany(userMockData.users);
 
-const userResult = await User.find();
-console.log(userResult);
+console.log("loaded test Peeps into database")
 
-User.find();
+await Peep.deleteMany();
+await Peep.insertMany(peepMockData.peeps);
+
+console.log("Load Complete")
+
+process.exit(0);

@@ -4,7 +4,7 @@ import { describe, test, expect } from "vitest";
 import mockData from "./testData/peepsMockData.js";
 import "./setup.js";
 
-describe("PeepsPage component tests", () => {
+describe("PeepsPage tests", () => {
   test("it should show the correct number of peeps based on the array supplied", () => {
     const fakePeepsLength = mockData.peeps.length;
     render(<PeepsPage dataArray={mockData.peeps} userData={{}} />);

@@ -1,11 +1,11 @@
 import chai from "chai";
 import { expect } from "chai";
 import app from "../app.js";
-import mockData from "./testData/usersMockData.js";
+import userMockData from "./testData/usersMockData.js";
 import User from '../src/user.model.js';
 import chaiHttp from "chai-http";
 
-const mockDataArray = mockData.users;
+const mockDataArray = userMockData.users;
 chai.use(chaiHttp);
 
 describe("registerUser router tests", () => {

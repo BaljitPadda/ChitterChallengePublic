@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon app",
-    "test": "mocha"
+    "test": "mocha",
+    "loadData": "node index.js"
   },
   "author": "Baljit Padda",
   "license": "ISC",

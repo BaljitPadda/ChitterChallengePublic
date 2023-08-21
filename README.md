@@ -5,11 +5,18 @@ My solution
 ```
 Instructions to run:
 
+Prerequisite:
+Please have MongoDB running and available on localhost:27107.
+The application will create/use a Peep database with peep and user collections. 
+
 Backend:
+From /BackEnd 
+Please use 'npm run loadData' to populate the database with some test peeps.
 Please use 'npm start' in the integrated terminal to start the server.
 Please use 'npm test' to run the tests.
 
 Frontend:
+From /FrontEnd
 Please use 'npm run dev' in the integrated terminal to start the application.
 
 ```
