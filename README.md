@@ -1,7 +1,21 @@
 
 My solution
+===
 
-My approach
+```
+Instructions to run:
+
+Backend:
+Please use 'npm start' in the integrated terminal to start the server.
+Please use 'npm test' to run the tests.
+
+Frontend:
+Please use 'npm run dev' in the integrated terminal to start the application.
+
+```
+
+My approach 
+===
 
 First I examined the user stories to identify my domain models.
 Then I thought of possible routes needed and created a request/response table.
@@ -16,7 +30,34 @@ I have been using postman to make sure everything works and have saved my reques
 For frontend, I created my own mock ups of pages and decided on a component heirarchy.
 *Please SEE MOCK UPS AND COMPONENT HEIRARCHY inside of the FrontEnd/images folder.
 
-I created my main components and identified state. 
+I created my main components, used Props and identified state.
+<br/>
+
+```
+Technologies used in this challenge:
+
+Frontend
+- React, Vite, Axios
+- testing-library/react, testing-library/jest-dom
+
+Backend
+- Express, MongoDB, Mongoose
+- Mocha, Chai, ChaiHttp
+```
+
+### You can log in as these users to test the app:
+
+Name: John Doe
+Username: John2000
+Email: John@fake.com
+Password: easypassword
+
+Name: Spidey
+Username: WebDev2023
+Email: spidey@fake.com
+Password: web
+
+You can also sign up and then log in.
 
 
 
@@ -26,10 +67,8 @@ I created my main components and identified state.
 
 
 
-
-
-
-
+<br/>
+<br/>
 
 Chitter Challenge
 =================
